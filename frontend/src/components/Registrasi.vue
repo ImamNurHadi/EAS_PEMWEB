@@ -56,7 +56,7 @@
   export default {
     data() {
       return {
-        registrations: [], // Array untuk menyimpan data pendaftaran
+        registrations: [],
         showAddRegistrationForm: false,
         newRegistration: {
           nama: "",
@@ -67,7 +67,7 @@
       };
     },
     created() {
-      this.fetchRegistrations(); // Panggil fungsi untuk mengambil data pendaftaran
+      this.fetchRegistrations();
     },
     methods: {
       async fetchRegistrations() {
@@ -85,7 +85,7 @@
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            // Mungkin Anda perlu menyertakan token atau kredensial di sini
+    
           },
           body: JSON.stringify(this.newRegistration)
         });
@@ -99,7 +99,7 @@
             asal_sekolah: "",
             status: "Waiting"
           };
-          this.fetchRegistrations(); // Perbarui data setelah pendaftaran berhasil
+          this.fetchRegistrations();
         } else {
           console.error('Gagal mendaftar. Status:', response.status);
         }
@@ -120,8 +120,5 @@
     }
   };
   </script>
-  
-  <style>
-  /* Tambahkan gaya CSS sesuai kebutuhan */
-  </style>
+ 
   
