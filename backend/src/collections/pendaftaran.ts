@@ -1,9 +1,14 @@
-// pendaftaran.ts
-
 import { CollectionConfig } from 'payload/types';
 
 const Pendaftaran: CollectionConfig = {
   slug: 'pendaftaran',
+  access: {
+    read: () => true,
+    update: () => true,
+    delete: () => true,
+    create: () => true,
+  },
+
   labels: {
     singular: 'Pendaftaran',
     plural: 'Pendaftaran'
